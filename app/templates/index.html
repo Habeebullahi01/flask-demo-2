@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="{{url_for('static', filename= 'script.js')}}" defer></script>
+    <link rel="stylesheet" href={{url_for('static', filename='styles.css')}}>
+    <!--Bootstrap-->
+    <title>{{my_title}}</title>
+  </head>
+  <body>
+    <h3>{{my_content}}</h3>
+    <div id="imageDiv">
+      <h5>Image</h5>
+      <img src="https://picsum.photos/200/300" alt="random Image" />
+      <!-- <img
+        src="https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/CCCCBr/PNG"
+        alt="molecule Image"
+      /> -->
+      <img
+        id="compImg"
+        src="{{url_for('static', filename='no-image.jfif')}}"
+        alt="molecule Image"
+      />
+      <button id="getImg">Get Image</button>
+    </div>
+    <form action="/echo" method="get">
+      <input id="compName" type="text" name="sent_data" autofocus />
+      <button type="submit">Submit to GET</button>
+    </form>
+    <form action="/echo" method="POST">
+      <input type="text" name="sent_data" autofocus />
+      <button type="submit">Submit to POST</button>
+    </form>
+  </body>
+</html>
