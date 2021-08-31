@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 # from werkzeug.wrappers import response
 import requests
-# import flask
+# import gunicorn
 
 
 app = Flask(__name__)
@@ -33,4 +33,4 @@ def shout():
 #     response = "{}".format(to_echo)
 #     return response
 
-# print(requests.__version__)
+# print(gunicorn.__version__)
