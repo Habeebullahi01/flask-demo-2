@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 # from werkzeug.wrappers import response
 import requests
+# import flask
 
 
 app = Flask(__name__)
@@ -31,3 +32,5 @@ def shout():
 #     to_echo = request.args.get("echo", "")
 #     response = "{}".format(to_echo)
 #     return response
+
+# print(requests.__version__)
